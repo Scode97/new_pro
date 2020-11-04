@@ -1,0 +1,22 @@
+{
+    "firstName": "NEW",
+    "lastName": "two",
+    "email": "twfo@two.com",
+    "password": "123",
+    "addresses": [
+     {
+        "city": "billtype",
+        "country": "kuwait",
+        "streetName": "nnnn",
+        "postalCode": "BHHBH",
+        "type": "mmm"
+     },
+      {
+        "city": "shiptype",
+        "country": "kuwait",
+        "streetName": "nnnn",
+        "postalCode": "BHHBH",
+        "type": "mmm"
+     }
+    ]
+}

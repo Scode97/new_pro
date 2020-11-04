@@ -17,8 +17,7 @@ public class UserDto implements Serializable {
 	private Boolean emailVerificationStatus = false;
 	
 	private List<AddressDTO> addresses;
-	
-	private List<OrderDTO> orders;
+
 	
 	public long getId() {
 		return id;
@@ -80,12 +79,7 @@ public class UserDto implements Serializable {
 	public void setAddresses(List<AddressDTO> addresses) {
 		this.addresses = addresses;
 	}
-	public List<OrderDTO> getOrders() {
-		return orders;
-	}
-	public void setOrders(List<OrderDTO> orders) {
-		this.orders = orders;
-	}
+	
 	
 }
 

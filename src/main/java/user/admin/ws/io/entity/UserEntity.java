@@ -44,8 +44,6 @@ public class UserEntity implements Serializable {
 	@OneToMany(mappedBy="userDetails", cascade=CascadeType.ALL)
 	private List<AddressEntity> addresses;
 	
-	@OneToMany(mappedBy="userDetails2", cascade=CascadeType.ALL)
-	private List<OrderEntity> orders;
 
 	public long getId() {
 		return id;
@@ -120,17 +118,10 @@ public class UserEntity implements Serializable {
 		this.addresses = addresses;
 	}
 
-	public List<OrderEntity> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<OrderEntity> orders) {
-		this.orders = orders;
 	}
 	
 	
 
-}
 
 
 

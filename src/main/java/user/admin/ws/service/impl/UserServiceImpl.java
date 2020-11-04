@@ -21,7 +21,6 @@ import user.admin.ws.io.repositories.UserRepository;
 import user.admin.ws.service.UserService;
 import user.admin.ws.shared.Utils;
 import user.admin.ws.shared.dto.AddressDTO;
-import user.admin.ws.shared.dto.OrderDTO;
 import user.admin.ws.shared.dto.UserDto;
 import user.admin.ws.ui.exceptions.UserServiceException;
 import user.admin.ws.ui.model.response.ErrorMessages;
@@ -53,17 +52,17 @@ public class UserServiceImpl implements UserService {
 			user.getAddresses().set(i, address);
 		}
 		
-		
-		for(int i=0;i<user.getOrders().size();i++)
-		{
-			OrderDTO order = user.getOrders().get(i);
-			order.setUserDetails(user);
-			order.setOrderId(utils.generateOrderId(30));
-			user.getOrders().set(i, order);
-		}
+//		
+//		for(int i=0;i<user.getOrders().size();i++)
+//		{
+//			OrderDTO order = user.getOrders().get(i);
+//			order.setUserDetails(user);
+//			order.setOrderId(utils.generateOrderId(30));
+//			user.getOrders().set(i, order);
+//		}
 		
 		  
-		//BeanUtils.copyProperties(user, userEntity);
+	
 		ModelMapper modelMapper = new ModelMapper();
 		UserEntity userEntity = modelMapper.map(user, UserEntity.class);
 
@@ -74,7 +73,7 @@ public class UserServiceImpl implements UserService {
 
 		UserEntity storedUserDetails = userRepository.save(userEntity);
  
-		//BeanUtils.copyProperties(storedUserDetails, returnValue);
+
 		UserDto returnValue  = modelMapper.map(storedUserDetails, UserDto.class);
 		
 
@@ -157,7 +156,7 @@ public class UserServiceImpl implements UserService {
 		
 		Pageable pageableRequest = PageRequest.of(page, limit);
 		
-		//findAll pageable returns pages
+	
 		Page<UserEntity> usersPage = userRepository.findAll(pageableRequest);
 		
 		List<UserEntity> users = usersPage.getContent();

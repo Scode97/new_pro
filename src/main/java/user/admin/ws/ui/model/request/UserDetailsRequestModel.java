@@ -9,7 +9,7 @@ public class UserDetailsRequestModel {
 	private String email;
 	private String password;
 	private List<AddressRequestModel> addresses;
-	private List<OrderRequestModel> orders;
+
 	
 	public String getFirstName() {
 		return firstName;
@@ -41,12 +41,7 @@ public class UserDetailsRequestModel {
 	public void setAddresses(List<AddressRequestModel> addresses) {
 		this.addresses = addresses;
 	}
-	public List<OrderRequestModel> getOrders() {
-		return orders;
-	}
-	public void setOrders(List<OrderRequestModel> orders) {
-		this.orders = orders;
-	}
+
 	
 }
 
